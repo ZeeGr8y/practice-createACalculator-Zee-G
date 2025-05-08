@@ -1,0 +1,63 @@
+
+//Create a function for each math operation using the math methods
+
+//Test each function with sample inputs to ensure it works as intended.
+
+//Combine the individual functions into a single "calculator" program where the user can select an operation and input the required values.
+
+/* Test the calculator by performing the following:
+Find the absolute value of -45.67.
+Raise 5 to the power of 3.
+Calculate the square root of 144.
+Determine the largest and smallest values from [3, 78, -12, 0.5, 27].
+Generate a random number between 1 and 50.
+Round 23.67891 to 2 decimal places. */
+
+// Absolute Value Calculation
+function absValue(num) {
+    return Math.abs(num);
+}
+console.log(`Absolute value of -45.67 is: ${absValue(-45.67)}`);
+
+
+// Power Calculation: 5^3
+function powCalc(a, b) {
+    return Math.pow(a, b);
+}
+console.log(`5 raised to the power of 3 is: ${powCalc(5, 3)}`);
+
+
+// Square Root Finder: sqrt of 144
+function findSqRoot(num2) {
+    return Math.sqrt(num2);
+}
+console.log(`The square root of 144 is: ${findSqRoot(144)}`);
+
+
+// Max and Min Finder from array
+function findMinMaxNumbers(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return { min: undefined, max: undefined };
+    }
+    let min = Math.min(...arr);
+    let max = Math.max(...arr);
+    return { min, max };
+}
+const arrayNums = [3, 78, -12, 0.5, 27];
+const result = findMinMaxNumbers(arrayNums);
+console.log(`From [${arrayNums}]--> Min: ${result.min}, Max: ${result.max}`);
+
+
+// Random Number Generator between 1 and 50
+function randNumber(num3) {
+    return Math.floor(Math.random() * num3) + 1;
+}
+console.log(`Random number between 1 and 50: ${randNumber(50)}`);
+
+
+// Custom Rounding to 2 decimal places
+function roundNumber(num4) {
+    let rounded = Math.round(num4 * 100) / 100;
+    return rounded;
+}
+console.log(`23.67891 rounded to 2 decimal places is: ${roundNumber(23.67891)}`);
