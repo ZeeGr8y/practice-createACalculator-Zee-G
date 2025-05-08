@@ -1,0 +1,46 @@
+
+//Create a function for each math operation using the math methods
+
+//Absolute Value Calculation: Given any number, return its absolute value.
+function absValue(num) {
+    return Math.abs(num);
+}
+console.log(absValue(-2));
+console.log(`The absolute value is: ${absValue(-45.67)}`);
+
+//Power Calculation: Calculate and return the value of a base raised to a specific power.
+function powCalc(a, b) {
+    return Math.pow(a, b);
+}
+console.log(powCalc(5, 3));
+
+//Square Root Finder: Calculate the square root of a number.
+function findSqRoot(num2) {
+    return Math.sqrt(num2);
+}
+console.log(`The sqrt is: ${findSqRoot(144)}`);
+
+//Maximum and Minimum Finder: From a given set of numbers, determine the largest and smallest values.
+function findMinMaxNumbers(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return { min: undefined, max: undefined };
+    }
+    let min = Math.min(...arr);
+    let max = Math.max(...arr);
+    return { min, max };
+}
+const arraryOfNums = [3, 78, -12, 0.5, 27];
+console.log(findMinMaxNumbers(arraryOfNums));
+
+//Random Number Generator: Generate a random integer within a specified range.
+function randNumber(num3) {
+    return Math.floor(Math.random() * num3) + 1;
+}
+console.log(`This is a random number: ${randNumber(105)}`);
+
+//Custom Rounding: Round a number to a specified number of decimal places.
+function roundNumber(num){
+    let rounded = Math.round(num *100)/100;
+  return rounded;
+}
+console.log(`This a rounded number: ${roundNumber(3.2456)} \n`);
