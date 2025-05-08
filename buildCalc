@@ -1,5 +1,4 @@
-
-//Create a function for each math operation using the math methods
+//Test Calculator
 
 //Absolute Value Calculation: Given any number, return its absolute value.
 function absValue(num) {
